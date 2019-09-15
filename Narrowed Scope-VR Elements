@@ -1,1 +1,28 @@
-sdklfjsdlfkj
+How I Narrowed My Scope:
+Originally, I had tacked on my VR scene on the end of my project.  When you managed to exit the house, the game would transition from a Visual 
+Novel setup to a VR one.  There, you would encounter a group of 3-4 zombies.  You would then need to fight these zombies, and kill them 
+all without being killed yourself.  After all the zombies were dead, you would transition back into VR mode, go through some dialouge, and then 
+the end credits would play, ending the game. 
+However, after some deliberating with myself, I decided that I would change the VR scene to happen with the fight with Thomas instead.  Before
+you leave the house, you encounter your 'dad' Thomas, who is in the process of turning into a "zombie".  You have to fight him in order to 
+get the keys that access your 'sister's' room, since you can't escape the house without saving her.  I had planned to have this fight be a 
+quick-time event, but I figured it would work well enough in VR.
+I decided to change the placement of the VR element for two reasons. One being that, while I did encorperate what was originally a tacked 
+on element into my story, I found that it was more work for me in the end to make this scene.  I'd have to create more assets, more animations,
+and be more worried about the gameplay factors (if it was fun, fair, visually interesting, ect.)  It was a lot of work for one school project,
+and since there was a lot else to do, having less scenes to worry about would be a relief.
+The second reason I moved it to Thomas's scene was that it would be a lot more psychologically stimulating.  You essentially have to beat 
+your own father to death with his own baseball bat, in order to save yourself and your sister.  Having a quicktime event for this sort of 
+scenario would allow for a stressful situation, but being able to physically 'swing' the bat yourself would allow for a different perspective.
+I think the horror of it all would be able to set in more.
+
+
+
+How VR Adds To The User's Experience:
+VR allows the player to stand in the shoes of the protagonist, Claire, and swing the bat using her hands.  They are essentially acting on her 
+behaf, doing what must be done, no matter how brutal.  Some may find it fun to be more physically immersed.  I have no doubt that, if I had
+gone on with creating the group of zombies, more people would have enjoyed it.  More zombies = more things to beat up, and being able to 
+physically do that is akin to being there in reality.  And even with a lack of zombies, using your own arms and hand movements to kill Thomas 
+adds another level onto his death.  Clicking a few computer keys or a mouse isn't quite as immersive.  
+
+
