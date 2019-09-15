@@ -138,11 +138,52 @@ namespace Rextester
                 person.Name = "Igor the Ratcatcher";
                 person.SayHello();//prints override class 
                 
+                }
+                
                 
                
                 
             
+                     //vector 3
             
+            Vector3 myVector = new Vector3(10, 20, 10);//indicates maginitude and direction
+            //setting end point
+            
+           // Vector3.forward //directions
+            
+            Vector3 result = Vector3.Lerp(start, end, .5f); //start and end position, 0.5 is midpoint
+            
+            float timePassed += Time.delta time;//time passed since last frame
+            float currentTime = timePassed / 1.0f; //total time / length of animation
+            bullet.position = Vector3.Lerp(startPosition, endPosition, currentTime);  //animate bullet
+            
+            
+            
+            Vector forward = Vector3.forward;
+            Vector down = Vector3.down;
+            Vector3 result = forward + down; //moves Gam object along a curve
+            
+            
+            
+            Vector3 left = transform.right * -1;// moves in a direction
+            
+            transform.parent = null; //if want parent, SetParent(), if not, set to null
+            
+            transform enemy = transform.Find("enemy");
+            enemy.DetachChildren();//Finds gameObject, moves gameObject out of hierchy
+            
+            //default Quaternion
+            Quaternion.identity;
+            
+            
+            //rotates using Euler angles
+            Quaternion objectRotation = Quaternion.identity;
+            objectRotation.eulerAngles = new Vector3d(90, 0 , 0);
+            
+            
+                
+                
+                
             
             
             
