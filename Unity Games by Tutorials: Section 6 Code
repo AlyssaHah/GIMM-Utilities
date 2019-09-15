@@ -182,7 +182,23 @@ namespace Rextester
             
             
                 
+              
                 
+                Quaternioni combined = horizonalRotation * verticalRotation;//combined rotations
+            
+            
+            transform.gameObject; //can be accessed
+            
+            //need to access components
+            Light pointLight = GetComponent<Light>();//awnt to change color of light
+            
+            
+            gameObject.SetActive(false);//will disapear from scene
+            
+            
+            
+           
+               
                 
             
             
