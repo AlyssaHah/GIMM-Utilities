@@ -1,0 +1,156 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Your code goes here
+            Console.WriteLine("Hello, world!");
+            
+            int meaningOfLife = 42;
+            float smallPi = 3.14f;
+            double bigPi = 3.14159265359;
+            string vaporWare = "Half Life 3";
+            bool likesPizza = true;
+            
+            var meaningOfLife = 42; //variables assign types based on values
+            
+            const bool likesPizzaa = true; //const vars/bools are immutable
+            
+            string[]writers = {"Brian", "Anthony", "Sean", "Eric"};  //list of writers
+            string[]editors = new string[5]; //sets number of elements in an array
+            
+            
+            if (likesPizza == false){
+                Console.WriteLine("You monster."); //if statement
+            }
+            
+            
+            for(int i =0; i < 10; i++){
+            Console.WriteLine("c# rocks"); //for loop
+            }
+            
+            
+             foreach (string writer in writers){
+                Console.Write(writer); //for each loop
+                
+                
+             if (meaningOfLife == 42){
+             bool inScope = true;
+             }//if block statement
+            
+            
+            
+            
+            
+            
+            
+            
+            struct Point2D{
+             public int X;
+             public int Y;
+            } //structure is a 2D point with two properities, they represent a location
+            
+            
+            Point2D myPoint = new Point2D();//new object
+            
+            myPoint.X = 10;//properties of Point2D
+            myPoint.Y = 20;
+            
+            public void AddPoint(Point2D anotherPoint) {
+              this.X = this.X + anotherPoint.X;
+              this.Y = this.Y + anotherPoint.Y;
+            }//method adds the two points together
+            
+            
+            Point2D anotherPoint = new Point2D();
+            anotherPoint.X = 5; //creating another Point2D object
+            anotherPoint.Y = 15;
+            
+            
+            myPoint.AddPoint(anotherPoint);//adds the points together
+            
+            Console.WriteLine(myPoint.X);
+            Console.WriteLine(myPoint.Y);
+            
+            
+            
+             
+            
+            //classes
+            
+            class Point2DRef {
+                public int X;
+                public int Y;
+                
+                public void AddPoint(Point2DRef anotherPoint){
+                    this.X = this.X + anotherPoint.X;
+                    this.Y = this.Y + anotherPoint.Y;
+                    
+                }//this struct is a value type, the class is a reference type
+                
+                Point2D yetAnotherPoint = myPoint;
+                yetAnotherPoint.X = 100;//new Point2D object
+                
+                Point2DRef pointRef = new Point2DRef();
+                pointRef.X = 20;
+                Point2DRef anotherRef = pointRef;
+                anotherRef.X = 25; //creates instance of Point2DRef, assigns value
+                
+                
+                
+                
+                //with classes
+                pointRef = null;
+                anotherRef.X = 125;
+                anotherRef = null;//garbage collection, removes non-referencing objects from memory
+                
+                
+                
+                //inheritance
+                class Person{
+                    public string Name;
+                    public virtual void SayHello(){
+
+                        Console.WriteLine("Hello");
+                    }
+                }//class called person that has a string and a method
+                
+                
+                class RenFairePerson : Person{
+                    base.SayHello();//will call parent class first
+                    public override void SayHello(){
+                     Console.Write("Huzzah");   
+                    }
+                    
+                }//Override class
+                
+                
+                RenFairePerson person = new RenFairePerson();
+                person.Name = "Igor the Ratcatcher";
+                person.SayHello();//prints override class 
+                
+                
+               
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+    }
+}
