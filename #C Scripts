@@ -1,0 +1,125 @@
+//EXAMPLE 1
+using System;
+using System.Globalization;
+
+public class Example
+{
+   public static void Main()
+   {
+      string[] values = { "1,304.16", "$1,456.78", "1,094", "152", 
+                          "123,45 €", "1 304,16", "Ae9f" };
+      double number;
+      CultureInfo culture = null;
+      
+      foreach (string value in values) {
+         try {
+            culture = CultureInfo.CreateSpecificCulture("en-US");
+            number = Double.Parse(value, culture);
+            Console.WriteLine("{0}: {1} --> {2}", culture.Name, value, number);
+         }   
+         catch (FormatException) {
+            Console.WriteLine("{0}: Unable to parse '{1}'.", 
+                              culture.Name, value);
+            culture = CultureInfo.CreateSpecificCulture("fr-FR");
+            try {
+               number = Double.Parse(value, culture);
+               Console.WriteLine("{0}: {1} --> {2}", culture.Name, value, number);
+            }
+            catch (FormatException) {
+               Console.WriteLine("{0}: Unable to parse '{1}'.", 
+                                 culture.Name, value);
+            }
+         }
+         Console.WriteLine();
+      }   
+   }
+}
+// The example displays the following output:
+//    en-US: 1,304.16 --> 1304.16
+//    
+//    en-US: Unable to parse '$1,456.78'.
+//    fr-FR: Unable to parse '$1,456.78'.
+//    
+//    en-US: 1,094 --> 1094
+//    
+//    en-US: 152 --> 152
+//    
+//    en-US: Unable to parse '123,45 €'.
+//    fr-FR: Unable to parse '123,45 €'.
+//    
+//    en-US: Unable to parse '1 304,16'.
+//    fr-FR: 1 304,16 --> 1304.16
+//    
+//    en-US: Unable to parse 'Ae9f'.
+//    fr-FR: Unable to parse 'Ae9f'.
+
+
+//How parsing works is that it goes through the list/array and sees if the strings match what you want to output.  I don't really know 
+//how it's done in C#, I'm more used to C+.  I think what this is doing is it's going through the array for each element, and seeing if 
+//there are no special characters, and if it can simplify the value to a simple decimal number.
+
+
+
+
+//EXAMPLE 2
+using System;
+using System.Globalization;
+
+public class Example
+{
+   public static void Main()
+   {
+      string value = "1,304";
+      int number;
+      IFormatProvider provider = CultureInfo.CreateSpecificCulture("en-US");
+      if (Int32.TryParse(value, out number))
+         Console.WriteLine("{0} --> {1}", value, number);
+      else
+         Console.WriteLine("Unable to convert '{0}'", value);
+            
+      if (Int32.TryParse(value, NumberStyles.Integer | NumberStyles.AllowThousands, 
+                        provider, out number))
+         Console.WriteLine("{0} --> {1}", value, number);
+      else
+         Console.WriteLine("Unable to convert '{0}'", value);
+   }
+}
+// The example displays the following output:
+//       Unable to convert '1,304'
+//       1,304 --> 1304
+
+
+//This is taking the string 'value' and printing it twice, once without allowing thousands to be recognized and the second time with.
+//If the program doesn't allow thousands, it will print an error.
+
+
+
+
+//EXAMPLE 3
+string phrase = "The quick brown fox jumps over the lazy dog.";
+string[] words = phrase.Split(' ');
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+//This is easier to explain.  This takes the string phrase, and splits it up into segments using a space ' ', and prints out each "word"
+individually.
+
+
+
+//EXAMPLE 4
+char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+
+string text = "one\ttwo three:four,five six seven";
+System.Console.WriteLine($"Original text: '{text}'");
+
+string[] words = text.Split(delimiterChars);
+System.Console.WriteLine($"{words.Length} words in text:");
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+//The first two printouts are easy to see.  The third is the text seperated by elements in the delimiterChars array, and they aren't 
+printed out with the rest of the characters.
