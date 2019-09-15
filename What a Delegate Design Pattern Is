@@ -1,0 +1,6 @@
+"In software engineering, the delegation pattern is a design pattern in object-oriented programming where an object, 
+ instead of performing one of its stated tasks, delegates that task to an associated helper object"
+ I believe that a delegate design pattern is like having seperate classes that feed into the main class.  Instead of the main class 
+ doing everything itself, it just calls on references to other classes and their methods, with those classes being specially designed to 
+ be associated with one or two aspects of a project.  EX: The main class in a video-game about vampire-slaying will have a Monster, Weapon,
+ and other related classes.
