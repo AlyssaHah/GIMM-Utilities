@@ -1,0 +1,105 @@
+
+//SIMPLE IF STATEMENT
+int a = 5;
+int b = 6;
+if (a + b > 10)
+    Console.WriteLine("The answer is greater than 10.");
+
+
+
+//IF - ELSE STATEMENT
+int a = 5;
+int b = 3;
+if (a + b > 10)
+{
+    Console.WriteLine("The answer is greater than 10");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+}
+
+
+
+//IF -ELSE STATEMENT, AND
+int a = 5;
+int b = 3;
+int c = 4;
+if ((a + b + c > 10) && (a == b))
+{
+    Console.WriteLine("The answer is greater than 10");
+    Console.WriteLine("And the first number is equal to the second");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+    Console.WriteLine("Or the first number is not equal to the second");
+}
+
+
+
+
+//IF - ELSE STATEMENT, OR
+
+int a = 5;
+int b = 3;
+int c = 4;
+if ((a + b + c > 10) || (a == b))
+{
+    Console.WriteLine("The answer is greater than 10");
+    Console.WriteLine("Or the first number is equal to the second");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+    Console.WriteLine("And the first number is not equal to the second");
+}
+
+
+
+
+
+//WHILE LOOP
+int counter = 0;
+while (counter < 10)
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+  counter++;
+}
+
+
+
+
+
+//DO -WHILE LOOP (executes code first, then checks the condition)
+int counter = 0;
+do
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+  counter++;
+} while (counter < 10);
+
+
+
+
+
+
+//FOR LOOP
+for(int counter = 0; counter < 10; counter++)
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+}
+
+
+
+
+//CHALLENGE ANSWER
+int sum = 0;
+for (int number = 1; number < 21; number++)
+{
+  if (number % 3 == 0)
+  {
+    sum = sum + number;
+  }
+}
+Console.WriteLine($"The sum is {sum}");
