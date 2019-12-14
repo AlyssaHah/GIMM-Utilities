@@ -1,0 +1,13 @@
+Basically, a lot of my research came down to looking up videos on YouTube, and trying a lot of different things out.  It was a very touch-and-go
+sort of process, where I would watch one video, try it out, and if it didn't work I'd move on to another one.  Once I found coding that worked
+I would tweak it to better fit what I wanted to do with my project.  For example, I found an example of a timer script, and an example of a 
+scoring script, and I manufactured a way to be able to use both kinds of scripts to create my time-based score system.  There were a lot of
+combinations involved.  I always tried not to copy outright, and to use my own code/strategies to make my game.
+
+I guess that I improved when I started to learn when to look for specific answers, and when to ask more broad questions concerning my coding.  
+There were a lot less results for, 'How to keep my player from going through the walls, and more for 'How to properly use rigidbodies and colliders'.
+However, sometimes being too broad was a bad thing, and I wasted a lot of time trying out different scripts/gameobject interactions that
+never panned out, just because I saw it online.  
+
+For the future, I want to have reading materials to pull ideas from.  I don't have a lot of coding books, but I feel like they would be able to 
+provide a source of knowledge that would be more likely to work out for me, providing the coding is fairly recent.  
