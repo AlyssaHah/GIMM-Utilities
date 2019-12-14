@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+Some stuff I found to be useful were the snippets of code I used to make my zombie target the player, and how to use the controller's trigger inputs to start and retry the game.
+Zombie code:
+if (player != null)       
+{            transform.LookAt(player);           
+              transform.localRotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, 0);
+
+             agent.SetDestination(player.position);           
+              zombie.Play("Zombie@walk");
+            if (Vector3.Distance(transform.position, player.position) < range)           
+           {                Attack();           
+           }       
+}
+Basically this makes the zombie target the player's prefab, which is a lot more helpful than the old code, which just bounced the 
+zombie around the room.  Now, you have to actively run away from the zombie to avoid taking damage.
+
+
+
+Controller Input:
+private void Update()
+    {
+        OVRInput.Update();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+           // PauseGameVR();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ContinueGame();
+            //ContinueGameVR();
+        }
+      
+        if(Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f)
+        {
+            PauseGameVR();
+        }
+        if (Input.GetAxis("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.2f)
+        {
+            ContinueGameVR();
+        }
+    }
+When my VR Pause and Continue methods were still in place, this was the coding I used to controll the pause screen via controller.  
+Squeezing one trigger would pause the game, and squeezing the other would continue it.  I changed the methods to be StartGame() and RetryGame(),
+just to make things somewhat easier to keep running in VR.  Obviously, the end goal is to not rely on the controller's triggers at all.
